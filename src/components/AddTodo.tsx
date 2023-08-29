@@ -2,17 +2,20 @@ import { Box, Button, Container, TextField } from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import { useState } from "react";
 
-const AddTodo = () => {
+interface IAddTodo {
+  addTodo: AddFn;
+}
+
+const AddTodo = ({ addTodo }: IAddTodo) => {
   const [text, setText] = useState("");
 
   const handleClick = () => {
-    console.log(text);
     setText("");
+    addTodo(text);
   };
 
-  
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{mb:'2rem'}}>
       <Box
         sx={{
           display: { xs: "block", sm: "flex" },

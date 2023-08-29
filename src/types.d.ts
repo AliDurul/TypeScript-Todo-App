@@ -3,3 +3,5 @@ interface Todotype {
   isDone: boolean;
   id: string | number;
 }
+
+type AddFn = (text: string) => Promise<void>;
