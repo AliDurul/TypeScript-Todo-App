@@ -34,7 +34,7 @@ const Home = () => {
 
   return (
     <Container maxWidth="lg">
-      <Typography variant="h2" color="error" align="center" mt={3}>
+      <Typography variant="h2" color="error" align="center" mt={15}>
         Todo App with Typescript
       </Typography>
       <AddTodo addTodo={addTodo} />
