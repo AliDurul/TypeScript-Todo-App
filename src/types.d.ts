@@ -6,3 +6,5 @@ interface Todotype {
 type GetFn = () => Promise<void>;
 type AddFn = (text: string) => Promise<void>;
 type DeleteFn = (id: string | number) => Promise<void>;
+type ToggleFn = (todo:TodoType) => Promise<void>;
+

@@ -25,12 +25,14 @@ const TodoList: React.FC<ITodoList> = ({ todos, getTodos }) => {
           minHeight: "350px",
         }}
       >
-        <Typography variant="h4" color="secondary">
+        <Typography variant="h4" color="secondary" align="center">
           InProgress Todos
         </Typography>
-        {progressTodos.map((todo) => (
-          <TodoListItem todo={todo} getTodos={getTodos}/>
-        ))}
+        {
+        progressTodos.map((todo) => (
+          <TodoListItem todo={todo} getTodos={getTodos} key={todo.id} />
+        ))
+        }
       </Grid>
       <Grid
         item
@@ -43,9 +45,14 @@ const TodoList: React.FC<ITodoList> = ({ todos, getTodos }) => {
           minHeight: "350px",
         }}
       >
-        <Typography variant="h4" color="green">
+        <Typography variant="h4" color="green" align="center">
           Completed Todos
         </Typography>
+        {
+        completedTodos.map((todo) => (
+          <TodoListItem todo={todo} getTodos={getTodos} key={todo.id} />
+        ))
+        }
       </Grid>
     </Grid>
   );
