@@ -42,6 +42,8 @@ const TodoListItem: FC<ITodoListItem> = ({ todo, getTodos }) => {
         mb: "5px",
         "&:hover": {
           backgroundColor: todo.isDone ? green[50] : purple[50],
+          borderRadius:"10px",
+          pl:"5px",
           ".MuiSvgIcon-root": { color: todo.isDone ? "green" : "purple" },
           ".MuiListItemText-root": { color: todo.isDone ? "green" : "purple" },
         },
