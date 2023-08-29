@@ -3,6 +3,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { FC } from "react";
 import axios from "axios";
 import { purple, green } from "@mui/material/colors";
+import { notify } from "../helper/sweetAlert";
 
 interface ITodoListItem {
   todo: Todotype;
@@ -10,11 +11,14 @@ interface ITodoListItem {
 }
 
 const TodoListItem: FC<ITodoListItem> = ({ todo, getTodos }) => {
+ 
   const deleteTodo: DeleteFn = async (id) => {
     try {
       await axios.delete(`${import.meta.env.VITE_BASE_URL}/${id}`);
+      notify("The todo was deleted successfully!", "success");
     } catch (error) {
       console.log(error);
+      notify("The todo was not deleted successfully!", "error");
     } finally {
       getTodos();
     }
@@ -26,8 +30,10 @@ const TodoListItem: FC<ITodoListItem> = ({ todo, getTodos }) => {
         ...todo,
         isDone: !todo.isDone,
       });
+      notify("The todo was updated successfully!", "success");
     } catch (error) {
       console.log(error);
+      notify("The todo was not updated successfully!", "error");
     } finally {
       getTodos();
     }

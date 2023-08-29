@@ -4,6 +4,7 @@ import AddTodo from "../components/AddTodo";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import TodoList from "../components/TodoList";
+import { notify } from "../helper/sweetAlert";
 
 const Home = () => {
   const [todos, setTodos] = useState<Todotype[]>([]);
@@ -21,7 +22,9 @@ const Home = () => {
   const addTodo: AddFn = async (text) => {
     try {
       await axios.post(url, { todo: text, isDone: false });
+      notify("The todo was created successfully!", "success");
     } catch (error) {
+      notify("The todo was not created successfully!", "error");
       console.log(error);
     } finally {
       getTodos();
