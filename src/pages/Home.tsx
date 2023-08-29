@@ -38,7 +38,7 @@ const Home = () => {
         Todo App with Typescript
       </Typography>
       <AddTodo addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} getTodos={getTodos} />
     </Container>
   );
 };
