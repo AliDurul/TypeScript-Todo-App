@@ -42,7 +42,6 @@ This project is basic a todo app which is written with typescript and used mock 
       </tbody>
 </table>
 
-VITE_BASE_URL = 'https://64ecd95ff9b2b70f2bfb0943.mockapi.io/todos'
 
 
 <div id="user-content-toc">
