@@ -38,6 +38,7 @@ const AddTodo = ({ addTodo }: IAddTodo) => {
           variant="contained"
           color="primary"
           onClick={handleClick}
+          disabled={!text.trim()}
           endIcon={<SaveIcon />}
         >
           Save Todo
