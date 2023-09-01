@@ -2,7 +2,7 @@
 
 <div id="user-content-toc">
   <ul align="left">
-    <summary><h1 style="display: inline-block">Photo Gallery App</h1></summary>
+    <summary><h1 style="display: inline-block">Typescript Todo App</h1></summary>
   </ul>
 </div>
 
@@ -51,7 +51,6 @@ This project is basic a todo app which is written with typescript and used mock 
 </div>
 
 
-[Live Link]()
 
 ![typescripttodo](https://github.com/AliDurul/TypeScript-Todo-App/assets/80897590/007bc20a-17fa-4ea1-badc-cd7d60b4de57)
 
